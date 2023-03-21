@@ -1,0 +1,35 @@
+{
+  "@@last_modified": "2023-03-08T02:07:10.754960",
+  "title": "Flutter APP",
+  "@title": {
+    "description": "Title for the Demo application",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "language": "language",
+  "@language": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "auto": "auto",
+  "@auto": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "remainingEmailsMessage": "{howMany,plural, =0{There are no emails left}=1{There is {howMany} email left}other{There are {howMany} emails left}}",
+  "@remainingEmailsMessage": {
+    "description": "How many emails remain after archiving.",
+    "type": "text",
+    "placeholders_order": [
+      "howMany"
+    ],
+    "placeholders": {
+      "howMany": {
+        "example": 42
+      }
+    }
+  }
+}

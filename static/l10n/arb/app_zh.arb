@@ -1,0 +1,8 @@
+{
+  "helloWorld": "你好世界!",
+  "@helloWorld": {
+    "description": "程序员传统习惯"
+  },
+    "language": "语言",
+    "auto": "自动"
+}
