@@ -47,6 +47,8 @@ dependencies:
   fluttertoast: ^8.2.1
   shared_preferences: ^2.0.18
   cached_network_image: ^3.2.3
+  easy_localization: ^3.0.1
+  process_run: ^0.12.5+2
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +83,7 @@ flutter:
     - static/imgs/avatar-default.png
     - static/imgs/avatar.png
     - static/jsons/user.json
+    - static/l10n/easy_localization/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
