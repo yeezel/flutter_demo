@@ -51,6 +51,7 @@ dependencies:
   process_run: ^0.12.5+2
   pigeon: ^9.1.1
   ffi: ^2.0.1
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
