@@ -76,6 +76,9 @@ class _ScaffoldRouteState extends State<ScaffoldRoute> {
       ),
       drawer: const MyDrawer(), //抽屉
       bottomNavigationBar: BottomNavigationBar( // 底部导航
+        //隐藏label
+        // showSelectedLabels: false,
+        // showUnselectedLabels: false,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Hocon: Texme'),
           BottomNavigationBarItem(icon: Icon(Icons.business), label: 'Business'),
