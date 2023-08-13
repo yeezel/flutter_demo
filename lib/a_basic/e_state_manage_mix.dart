@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-//父Widget管理子Widget的状态
+//父Widget管理子Widget的一部分状态
 void main() => runApp(const MyApp());
 
-//混合状态管理
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

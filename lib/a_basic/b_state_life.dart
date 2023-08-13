@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
-
+//生命周期
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
