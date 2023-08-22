@@ -21,5 +21,5 @@ User _$UserFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
       'a_name': instance.name,
       'email': instance.email,
-      'address': instance.address,
+      'address': instance.address.toJson(),
     };

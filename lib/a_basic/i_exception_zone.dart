@@ -25,6 +25,8 @@ void main() {
     onError?.call(details); //调用默认的onError
     reportErrorAndLog(details); //上报
   };
+
+  //Zone中可以捕获日志输出、Timer创建、微任务调度的行为，同时Zone也可以捕获所有未处理的异常
   runZoned(
     //可以捕获所有未处理的异常
     () => runApp(const MyApp()), //监控待捕获的数据

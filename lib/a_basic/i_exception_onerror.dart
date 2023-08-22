@@ -11,10 +11,12 @@ class MyErrorsHandler {
 
 Future<void> main() async {
   await MyErrorsHandler.initialize();
+  //所有 Flutter 的错误均会被回调方法 FlutterError.onError 捕获
   FlutterError.onError = (details) {
     FlutterError.presentError(details);
     MyErrorsHandler.onErrorDetails(details);
   };
+  //所有未被 Flutter 处理的错误均会被回调方法PlatformDispatcher.instance.onError捕获
   PlatformDispatcher.instance.onError = (error, stack) {
     MyErrorsHandler.onError(error, stack);
     return true;
