@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../b_widget/n10_layout_pageview_cache_custom.dart';
-
 //异步更新UI
 void main() => runApp(const MyApp());
 

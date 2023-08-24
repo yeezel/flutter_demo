@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../b_widget/n10_layout_pageview_cache_custom.dart';
-
 //异步更新UI
 //和Future 不同的是，它可以接收多个异步操作的结果，它常用于会多次读取数据的异步任务场景，如网络内容下载、文件读写等
 void main() => runApp(const MyApp());

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../b_widget/n10_layout_pageview_cache_custom.dart';
-
 //导航返回拦截，避免用户误触返回按钮而导致 App 退出
 void main() => runApp(const MyApp());
 

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 Future<List<Photo>> fetchPhotos(http.Client client) async {
+  debugPrint("http get");
   final response = await client
       .get(Uri.parse('https://jsonplaceholder.typicode.com/photos'));
 
@@ -103,7 +104,7 @@ class PhotosList extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+        crossAxisCount: 5,
       ),
       itemCount: photos.length,
       itemBuilder: (context, index) {

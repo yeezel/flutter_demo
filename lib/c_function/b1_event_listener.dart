@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../b_widget/n10_layout_pageview_cache_custom.dart';
-
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
