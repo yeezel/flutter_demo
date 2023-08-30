@@ -32,7 +32,7 @@ Text(
 )
 ''';
     ui = Text(
-      "Hello world! I'm Jack. " * 4,
+      "maxLine：Hello world! I'm Jack. " * 4,
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
     );

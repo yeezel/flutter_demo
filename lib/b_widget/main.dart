@@ -8,9 +8,11 @@ import 'package:flutter_demo/b_widget/tabbarview.dart';
 import 'package:flutter_demo/b_widget/theme.dart';
 import 'package:flutter_demo/b_widget/transform.dart';
 
+import 'BottomNavigationBar.dart';
 import 'CustomScrollView.dart';
 import 'CustomSliverFlexibleHeader.dart';
 import 'DecoratedBox.dart';
+import 'DropdownButton.dart';
 import 'Form.dart';
 import 'NestedScrollView.dart';
 import 'SliverToBoxAdapter.dart';
@@ -30,6 +32,7 @@ import 'listview.dart';
 import 'animatedList.dart';
 import 'SliverPersistentHeader.dart';
 import 'CustomSliverPersistentHeaderToBox.dart';
+import 'motion_toast.dart';
 import 'notificationListener.dart';
 import 'othersliver.dart';
 import 'singlechildscrollview.dart';
@@ -52,22 +55,24 @@ abstract class Data{
   void init();
 }
 List<Datas> datas = [
-  LayoutWidget()..init(),
-  TextWidget()..init(),
-  FontWidget()..init(),
-  ButtonWidget()..init(),
-  ImageWidget()..init(),
-  IconWidget()..init(),
-  TextFieldWidget()..init(),
-  FormWidget()..init(),
-  SwitchCheckBoxWidget()..init(),
-  ProgressWidget()..init(),
-  DialogWidget()..init(),
-  ListViewWidget()..init(),
-  AnimatedListWidget()..init(),
-  GridViewWidget()..init(),
-  PageViewWidget()..init(),
-  TabBarViewWidget()..init(),
+  // LayoutWidget()..init(),
+  // TextWidget()..init(),
+  // FontWidget()..init(),
+  // ButtonWidget()..init(),
+  // MotionToastWidget()..init(),
+  // DropdownButtonWidget()..init(),
+  // ImageWidget()..init(),
+  // IconWidget()..init(),
+  // TextFieldWidget()..init(),
+  // FormWidget()..init(),
+  // SwitchCheckBoxWidget()..init(),
+  // ProgressWidget()..init(),
+  // DialogWidget()..init(),
+  // ListViewWidget()..init(),
+  // AnimatedListWidget()..init(),
+  // GridViewWidget()..init(),
+  // PageViewWidget()..init(),
+  // TabBarViewWidget()..init(),
 
   NestedScrollViewWidget()..init(),
   CustomScrollViewWidget()..init(),
@@ -80,16 +85,17 @@ List<Datas> datas = [
   ScrollControllerWidget()..init(),
   ScrollNotificationWidget()..init(),
 
-  ThemeWidget()..init(),
-  ColorWidget()..init(),
-  PaddingEdgeInsetsWidget()..init(),
-  DecoratedBoxWidget()..init(),
-  TransformWidget()..init(),
-  RotatedboxWidget()..init(),
-  ContainerWidget()..init(),
-  ClipWidget()..init(),
-  FittedBoxWidget()..init(),
-  ScaffoldWidget()..init(),
+  // ThemeWidget()..init(),
+  // ColorWidget()..init(),
+  // PaddingEdgeInsetsWidget()..init(),
+  // DecoratedBoxWidget()..init(),
+  // TransformWidget()..init(),
+  // RotatedboxWidget()..init(),
+  // ContainerWidget()..init(),
+  // ClipWidget()..init(),
+  // FittedBoxWidget()..init(),
+  // ScaffoldWidget()..init(),
+  // BottomNavigationBarWidget()..init(),
 ];
 class LearnFlutterWidgetApp extends StatefulWidget {
   const LearnFlutterWidgetApp({super.key});
