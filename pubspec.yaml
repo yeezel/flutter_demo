@@ -63,6 +63,10 @@ dependencies:
 #  realm: ^1.4.0
   http: ^1.0.0
 
+  # qrcode
+  qr_flutter: ^4.1.0
+  qr_code_scanner: ^1.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

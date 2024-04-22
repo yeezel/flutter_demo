@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../main.dart';
 
@@ -79,9 +80,12 @@ class NavigationRailDemo extends StatefulWidget {
 }
 
 class _NavigationRailDemoState extends State<NavigationRailDemo> {
-
   bool extended = false;
   NavigationRailLabelType labelType = NavigationRailLabelType.selected;
+
+  //二级菜单面板使用oerlay
+  final GlobalKey _navigationRailKey = GlobalKey();
+  OverlayEntry? _overlayEntry;
 
   final Map<String,IconData> destinations = {
     '消息':Icons.message_outlined,
@@ -107,6 +111,7 @@ class _NavigationRailDemoState extends State<NavigationRailDemo> {
     const TextStyle labelStyle =  TextStyle(color: textColor,fontSize: 11);
 
     return NavigationRail(
+      key:_navigationRailKey,
       //导航菜单外的首尾组件 leading(首) 和 trailing(尾)
       leading: TextButton(
         child: const Icon(Icons.menu_open,color: Colors.grey,),
@@ -130,6 +135,7 @@ class _NavigationRailDemoState extends State<NavigationRailDemo> {
           ),
         ),
       ),
+
       //右侧会有阴影，该值越大，阴影越明显
       elevation: 51,
       // 用于折叠的时候显示样式，默认是 none ，也就是只显示图标，没有文字
@@ -145,18 +151,59 @@ class _NavigationRailDemoState extends State<NavigationRailDemo> {
 
       //控制图标后面的背景指示器
       useIndicator : true, // 是否添加指示器
-      indicatorColor : Colors.red  ,
+      indicatorColor : Colors.red,
+      //修改背景图形
+      indicatorShape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+        side: const BorderSide(color: Colors.yellow,width: 2.0),
+      ),
 
       selectedIndex: index,
       onDestinationSelected: _onDestinationSelected,
       destinations: list,
     );
   }
-
+  // 添加二级菜单面板
+  // 在Flutter中，Overlay是一个非常灵活的组件，它可以管理一堆可以独立管理的OverlayEntry对象。
+  // 这些OverlayEntry对象可以让独立的子Widget在其他Widget上方“浮动”显示。
+  // 创建OverlayEntry
+  OverlayEntry _createOverlayEntry() {
+    RenderBox renderBox = _navigationRailKey.currentContext?.findRenderObject() as RenderBox;
+    var size = renderBox.size;
+    var offset = renderBox.localToGlobal(Offset.zero);
+    return OverlayEntry(
+      builder: (BuildContext context) => Positioned(
+        left: offset.dx+size.width,
+        top: offset.dy,
+        width: size.width,
+        height: size.height,
+        child: Material(
+          elevation: 4.0,
+          child: ListView(
+            shrinkWrap: true,
+            children: <Widget>[
+              const ListTile(title: Text('第一项')),
+              const ListTile(title: Text('第二项')),
+              ListTile(title: const Text('关闭'), onTap: () => _overlayEntry?.remove()),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
   void _onDestinationSelected(int value) {
+    //0开始，leading(首) 和 trailing(尾)不会触发该方法
+    debugPrint("$value");
     //TODO 更新索引 + 切换界面
     _controller.jumpToPage(value); // tag1
     _selectIndex.value = value; //tag2
+    // 添加二级菜单面板
+    if(value==2){
+      _overlayEntry = _createOverlayEntry();
+      Overlay.of(context)?.insert(_overlayEntry!);
+    } else if(_overlayEntry.isBlank!){
+      _overlayEntry?.remove();
+    }
   }
 
   @override
