@@ -9,6 +9,7 @@ import 'package:flutter_demo/widget/basic/text.dart';
 import 'package:flutter_demo/widget/form/checkbox.dart';
 import 'package:flutter_demo/widget/form/form.dart';
 import 'package:flutter_demo/widget/form/switch.dart';
+import 'package:flutter_demo/widget/other/navigationrail.dart';
 import 'package:flutter_demo/widget/view/qrcode.dart';
 
 import 'other/Rsync_FutureBuilderFunc.dart';
@@ -152,7 +153,7 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
     EventBusFunc(),//56
     const NotificationListenerFunc(),//57
     const CustomNotificationFunc(),//58
-    const Text(""),//59 delete
+    const NavigationRailWidget(),//59
     const AnimationStatelistenerFunc(),//60
     const AnimatedWidgetFunc(),//61
     const AnimationRouterFunc(),//62
@@ -240,6 +241,7 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
           MenuProp(label: "FittedBox", key: 29, icon: const Icon(Icons.text_format)),
           MenuProp(label: "RotatedBox", key: 30, icon: const Icon(Icons.text_format)),
           MenuProp(label: "BottomNavigationBar", key: 31, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "NavigationRail", key: 59, icon: const Icon(Icons.text_format)),
           MenuProp(label: "ShowWidget", key: 76, icon: const Icon(Icons.text_format)),
         ]),
     MenuProp(label: "功能", key: -6, icon: const Icon(Icons.back_hand),
