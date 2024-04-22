@@ -26,7 +26,7 @@ class ScaleAnimationRoute extends StatefulWidget {
   @override
   State<ScaleAnimationRoute> createState() => _ScaleAnimationRouteState();
 }
-
+//需要继承TickerProvider，如果有多个AnimationController，则应该使用TickerProviderStateMixin。
 class _ScaleAnimationRouteState extends State<ScaleAnimationRoute>
     with SingleTickerProviderStateMixin {
   late Animation<double> animation;
@@ -40,6 +40,8 @@ class _ScaleAnimationRouteState extends State<ScaleAnimationRoute>
       vsync: this,
     );
 
+    //使用弹性曲线
+    //animation=CurvedAnimation(parent: controller, curve: Curves.bounceIn);
     //匀速
     //图片宽高从0变到300
     animation = Tween(begin: 0.0, end: 500.0).animate(controller)

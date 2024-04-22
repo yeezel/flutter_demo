@@ -14,10 +14,10 @@ class AnimationRouterFunc extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(title: const Text("test")),
-        body: Center(
+        body: const Center(
           child:  Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               SizedBox(height: 50,),
               //渐隐渐入动画，PageRouteBuilder实现
               PageRouteBuilderRoute(),

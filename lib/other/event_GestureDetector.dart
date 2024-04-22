@@ -11,10 +11,10 @@ class GestureDetectorFunc extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
+      home: const Scaffold(
         body: Center(
             child: Column(
-              children: const [
+              children: [
                 SizedBox(height: 50,),
                 Text("手势识别"),
                 GestureTest(),

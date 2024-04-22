@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
         body: Center(
           child:  NotificationListener(
             //也可只监听特定类型通知base全国
-            //NotificationListener<Scro
-            // llEndNotification>(
+            //NotificationListener<ScrollEndNotification>(
             onNotification: (notification) {
               switch (notification.runtimeType) {
                 case ScrollStartNotification:

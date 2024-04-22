@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/widget/basic/button.dart';
 import 'package:flutter_demo/widget/basic/color.dart';
+import 'package:flutter_demo/widget/basic/drawer.dart';
+import 'package:flutter_demo/widget/basic/drvider.dart';
 import 'package:flutter_demo/widget/basic/font.dart';
 import 'package:flutter_demo/widget/basic/image.dart';
 import 'package:flutter_demo/widget/basic/text.dart';
 import 'package:flutter_demo/widget/form/checkbox.dart';
 import 'package:flutter_demo/widget/form/form.dart';
 import 'package:flutter_demo/widget/form/switch.dart';
+import 'package:flutter_demo/widget/view/qrcode.dart';
 
 import 'other/Rsync_FutureBuilderFunc.dart';
 import 'other/Rsync_StreamBuilder.dart';
@@ -14,7 +17,6 @@ import 'other/ValueListenableBuilder.dart';
 import 'other/animation_AnimatedSwitcher.dart';
 import 'other/animation_AnimatedWidget.dart';
 import 'other/animation_AnimationControlle.dart';
-import 'other/animation_base.dart';
 import 'other/animation_custom.dart';
 import 'other/animation_hero.dart';
 import 'other/animation_otherwidget.dart';
@@ -63,6 +65,7 @@ import 'widget/layout/wrap_layout.dart';
 import 'widget/other/bottom_navigation_bar.dart';
 import 'widget/other/fittedbox.dart';
 import 'widget/other/rotatedbox.dart';
+import 'widget/other/show.dart';
 import 'widget/other/transform.dart';
 import 'widget/view/custom_sliverflexibleheader.dart';
 import 'widget/view/sliver_demo.dart';
@@ -149,7 +152,7 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
     EventBusFunc(),//56
     const NotificationListenerFunc(),//57
     const CustomNotificationFunc(),//58
-    const AnimationBaseFunc(),//59
+    const Text(""),//59 delete
     const AnimationStatelistenerFunc(),//60
     const AnimatedWidgetFunc(),//61
     const AnimationRouterFunc(),//62
@@ -166,6 +169,10 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
     const CustomDoneWidget(),//73
     const CustomWatermarkWidget(),//74
     const ChannelsFunc(),//75
+    const ShowWidget(),//76
+    const DrividerWidget(),//77
+    const QrCodeWidget(),//78
+    const DrawerWidget(),//79
   ];
 
   final List<MenuProp> menus=[
@@ -186,34 +193,36 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
         ]),
     MenuProp(label: "基础（basic）", key: -2, icon: const Icon(Icons.adb),
         children: [
-          MenuProp(label: "Text", key: 10, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "Font", key: 11, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "Button", key: 12, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "Image", key: 13, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "Theme", key: 18, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "Colors", key: 19, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "Clip", key: 22, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "文本（Text）", key: 10, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "字体（Font）", key: 11, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "按钮（Button）", key: 12, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "图片（Image）", key: 13, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "主题（Theme）", key: 18, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "颜色（Colors）", key: 19, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "裁剪（Clip）", key: 22, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "侧边栏/抽屉（Drawer）", key: 79, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "下划线（Drivider）", key: 77, icon: const Icon(Icons.text_format)),
           MenuProp(label: "DecoratedBox", key: 25, icon: const Icon(Icons.text_format)),
           MenuProp(label: "PaddingEdgeInsets", key: 26, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "ListView", key: 33, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "AnimatedList", key: 34, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "列表（ListView）", key: 33, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "动画列表（AnimatedList）", key: 34, icon: const Icon(Icons.text_format)),
           MenuProp(label: "GridView", key: 35, icon: const Icon(Icons.text_format)),
           MenuProp(label: "PageView", key: 36, icon: const Icon(Icons.text_format)),
           MenuProp(label: "TabBarView", key: 37, icon: const Icon(Icons.text_format)),
         ]),
     MenuProp(label: "表单", key: -3, icon: const Icon(Icons.table_chart),
         children: [
-          MenuProp(label: "TextField", key: 14, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "Switch", key: 15, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "CheckBox", key: 16, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "SelectItem", key: 21, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "FormDemo", key: 17, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "字段（TextField）", key: 14, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "切换按钮（Switch）", key: 15, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "勾选框（CheckBox）", key: 16, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "下拉框（SelectItem）", key: 21, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "表单（FormDemo）", key: 17, icon: const Icon(Icons.text_format)),
         ]),
     MenuProp(label: "视图", key: -4, icon: const Icon(Icons.back_hand),
         children: [
-          MenuProp(label: "Toast", key: 20, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "Progress", key: 23, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "Dialog", key: 24, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "提示框（Toast）", key: 20, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "进度条（Progress）", key: 23, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "弹窗（Dialog）", key: 24, icon: const Icon(Icons.text_format)),
           MenuProp(label: "SingleChildScrollView", key: 38, icon: const Icon(Icons.text_format)),
           MenuProp(label: "ScrollController", key: 39, icon: const Icon(Icons.text_format)),
           MenuProp(label: "ScrollNotification", key: 40, icon: const Icon(Icons.text_format)),
@@ -223,6 +232,7 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
           MenuProp(label: "SliverToBoxAdapter", key: 44, icon: const Icon(Icons.text_format)),
           MenuProp(label: "CustomSliverFlexibleHeader", key: 45, icon: const Icon(Icons.text_format)),
           MenuProp(label: "SliveDemo", key: 46, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "二维码（QrCode）", key: 78, icon: const Icon(Icons.text_format)),
         ]),
     MenuProp(label: "其他", key: -5, icon: const Icon(Icons.back_hand),
         children: [
@@ -230,6 +240,7 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
           MenuProp(label: "FittedBox", key: 29, icon: const Icon(Icons.text_format)),
           MenuProp(label: "RotatedBox", key: 30, icon: const Icon(Icons.text_format)),
           MenuProp(label: "BottomNavigationBar", key: 31, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "ShowWidget", key: 76, icon: const Icon(Icons.text_format)),
         ]),
     MenuProp(label: "功能", key: -6, icon: const Icon(Icons.back_hand),
         children: [
@@ -245,8 +256,7 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
           MenuProp(label: "EventBus", key: 56, icon: const Icon(Icons.text_format)),
           MenuProp(label: "NotificationListener", key: 57, icon: const Icon(Icons.text_format)),
           MenuProp(label: "CustomNotification", key: 58, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "AnimationBase", key: 59, icon: const Icon(Icons.text_format)),
-          MenuProp(label: "AnimationStatelistener", key: 60, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "AnimationBase", key: 60, icon: const Icon(Icons.text_format)),
           MenuProp(label: "AnimatedWidget", key: 61, icon: const Icon(Icons.text_format)),
           MenuProp(label: "AnimationRouter", key: 62, icon: const Icon(Icons.text_format)),
           MenuProp(label: "AnimationHeroDemo", key: 63, icon: const Icon(Icons.text_format)),

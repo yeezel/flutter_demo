@@ -7,6 +7,7 @@ void main() => runApp(GetMaterialApp(
     //读取系统语言
     //locale: Get.deviceLocale,
     locale: const Locale('en', 'US'),
+    //备用语言，当locale无法匹配时，会匹配该语言
     fallbackLocale: const Locale('en', 'UK'),
     //------------
     home: const Home()
