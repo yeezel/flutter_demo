@@ -41,6 +41,24 @@ ListView(
         ListTile(title: Text('Item 1')),
         ListTile(title: Text('Item 2')),
         ListTile(title: Text('Item 3')),
+        ExpansionTile(
+          childrenPadding: EdgeInsets.only(left: 40),
+          title: Text('See More'),
+          children: <Widget>[
+            ListTile(title: Text('Item 1')),
+            ListTile(title: Text('Item 2')),
+            ListTile(title: Text('Item 3')),
+            ExpansionTile(
+              tilePadding: EdgeInsets.only(left: 40),
+              childrenPadding: EdgeInsets.only(left: 80),
+              title: Text('See More'),
+              children: <Widget>[
+                ListTile(title: Text('Item 4')),
+                ListTile(title: Text('Item 5')),
+              ],
+            ),
+          ],
+        ),
       ],
     ),
   ],
@@ -58,11 +76,21 @@ ListView(
         Text('When you smile, you knock me out, I fall apart'),
         Text('And I thought I was so smart'),
         ExpansionTile(
+          childrenPadding: EdgeInsets.only(left: 40),
           title: Text('See More'),
           children: <Widget>[
             ListTile(title: Text('Item 1')),
             ListTile(title: Text('Item 2')),
             ListTile(title: Text('Item 3')),
+            ExpansionTile(
+              tilePadding: EdgeInsets.only(left: 40),
+              childrenPadding: EdgeInsets.only(left: 80),
+              title: Text('See More'),
+              children: <Widget>[
+                ListTile(title: Text('Item 4')),
+                ListTile(title: Text('Item 5')),
+              ],
+            ),
           ],
         ),
       ],
