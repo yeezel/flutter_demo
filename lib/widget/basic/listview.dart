@@ -21,7 +21,7 @@ class ListViewWidget extends StatelessWidget {
 class Demo1 extends Data{
   @override
   void init() {
-    title="ListView";
+    title="ListView / ExpansionTile / ListTile";
     code = '''
 ListView(
   //该属性表示是否根据子组件的总长度来设置ListView的长度，默认值为false 。
@@ -34,6 +34,15 @@ ListView(
     Text('Domestic life was never quite my style'),
     Text('When you smile, you knock me out, I fall apart'),
     Text('And I thought I was so smart'),
+    // 展开显示更多的内容，或者折叠起来隐藏内容， 通常与 ListView 一起使用
+    ExpansionTile(
+      title: Text('See More'),
+      children: <Widget>[
+        ListTile(title: Text('Item 1')),
+        ListTile(title: Text('Item 2')),
+        ListTile(title: Text('Item 3')),
+      ],
+    ),
   ],
 )
 ''';
@@ -48,6 +57,14 @@ ListView(
         Text('Domestic life was never quite my style'),
         Text('When you smile, you knock me out, I fall apart'),
         Text('And I thought I was so smart'),
+        ExpansionTile(
+          title: Text('See More'),
+          children: <Widget>[
+            ListTile(title: Text('Item 1')),
+            ListTile(title: Text('Item 2')),
+            ListTile(title: Text('Item 3')),
+          ],
+        ),
       ],
     );
   }
