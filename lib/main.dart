@@ -5,6 +5,7 @@ import 'package:flutter_demo/widget/basic/drawer.dart';
 import 'package:flutter_demo/widget/basic/drvider.dart';
 import 'package:flutter_demo/widget/basic/font.dart';
 import 'package:flutter_demo/widget/basic/image.dart';
+import 'package:flutter_demo/widget/basic/stepper.dart';
 import 'package:flutter_demo/widget/basic/text.dart';
 import 'package:flutter_demo/widget/form/checkbox.dart';
 import 'package:flutter_demo/widget/form/form.dart';
@@ -174,6 +175,7 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
     const DrividerWidget(),//77
     const QrCodeWidget(),//78
     const DrawerWidget(),//79
+    const StepperWidget(), //80
   ];
 
   final List<MenuProp> menus=[
@@ -210,6 +212,7 @@ class LearnFlutterWidgetAppState extends State<LearnFlutterWidgetApp> {
           MenuProp(label: "GridView", key: 35, icon: const Icon(Icons.text_format)),
           MenuProp(label: "PageView", key: 36, icon: const Icon(Icons.text_format)),
           MenuProp(label: "TabBarView", key: 37, icon: const Icon(Icons.text_format)),
+          MenuProp(label: "步骤（Stepper）", key: 80, icon: const Icon(Icons.text_format)),
         ]),
     MenuProp(label: "表单", key: -3, icon: const Icon(Icons.table_chart),
         children: [
