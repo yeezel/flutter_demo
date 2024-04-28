@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../main.dart';
+import '../../framework/page/data.dart';
+import '../../framework/page/widget_page.dart';
 
 class RotatedboxWidget extends StatelessWidget {
   const RotatedboxWidget({super.key});

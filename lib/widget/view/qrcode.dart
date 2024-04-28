@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-import '../../main.dart';
+import '../../framework/page/data.dart';
+import '../../framework/page/widget_page.dart';
 
 class QrCodeWidget extends StatelessWidget {
   const QrCodeWidget({super.key});

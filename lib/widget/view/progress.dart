@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-import '../../main.dart';
+import '../../framework/page/data.dart';
+import '../../framework/page/widget_page.dart';
 
 class ProgressWidget extends StatelessWidget {
   const ProgressWidget({super.key});

@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../main.dart';
+import '../../framework/page/data.dart';
+import '../../framework/page/widget_page.dart';
+
+/*
+错误：
+RenderCustomMultiChildLayoutBox object was given an infinite size during layout.
+
+使用 Expanded 或 Flexible 包裹： 如果 RenderCustomMultiChildLayoutBox 是 Row 或 Column 的子组件，
+尝试使用 Expanded 或 Flexible 包裹它，这样可以告诉Flutter如何根据可用空间来调整子组件的大小
+ */
 
 class FlexLayout extends StatelessWidget {
   const FlexLayout({super.key});

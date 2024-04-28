@@ -3,7 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../../main.dart';
+import '../../framework/page/data.dart';
+import '../../framework/page/widget_page.dart';
 
 class CustomSliverFlexibleHeaderWidget extends StatelessWidget {
   const CustomSliverFlexibleHeaderWidget({super.key});

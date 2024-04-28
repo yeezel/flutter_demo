@@ -1,7 +1,8 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
-import '../../main.dart';
+import '../../framework/page/data.dart';
+import '../../framework/page/widget_page.dart';
 
 class ListViewWidget extends StatelessWidget {
   const ListViewWidget({super.key});

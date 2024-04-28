@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../main.dart';
+import '../../framework/page/data.dart';
+import '../../framework/page/widget_page.dart';
 
 class ImageAssetWidget extends StatelessWidget {
   const ImageAssetWidget({super.key});

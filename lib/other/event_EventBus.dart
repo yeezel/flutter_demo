@@ -2,10 +2,10 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 //事件总线通常用于组件之间状态共享
+final EventBus bus = EventBus();
 class EventBusFunc extends StatelessWidget {
-  EventBusFunc({super.key});
+  const EventBusFunc({super.key});
   //定义一个top-level（全局）变量，页面引入该文件后可以直接使用bus
-  final EventBus bus = EventBus();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
