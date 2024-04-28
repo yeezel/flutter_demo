@@ -52,7 +52,7 @@ class _ResponsiveLayoutState extends State<ResponsiveLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Header(navopen:navopen),
+      // appBar: Header(navopen:navopen),
       body: Row(
         children: [
           Navigation(navopen:navopen, items: widget.items, onSelect: onSelect,),
