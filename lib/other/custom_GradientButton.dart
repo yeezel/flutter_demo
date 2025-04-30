@@ -174,7 +174,7 @@ class GradientButton extends StatelessWidget {
                   widthFactor: 1,
                   heightFactor: 1,
                   child: DefaultTextStyle(
-                    style: theme.textTheme.button!.copyWith(
+                    style: theme.textTheme.labelLarge!.copyWith(
                       color: disabled
                           ? disabledTextColor ?? Colors.black38
                           : textColor ?? Colors.white,
